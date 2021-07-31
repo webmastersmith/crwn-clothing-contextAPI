@@ -6,7 +6,8 @@ import CollectionsContext from '../../contexts/collections/collections.context'
 import './collections-overview.styles.scss'
 
 const CollectionsOverview = () => {
-  const collections = useContext(CollectionsContext)
+  const collectionsMap = useContext(CollectionsContext)
+  const collections = Object.values(collectionsMap)
 
   return (
     <div className="collections-overview">
